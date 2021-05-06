@@ -80,7 +80,16 @@
   
       // 6. create a list of Boulevards in Paris that contain 'de' anywhere in the name
       // https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
-  
+      const category = document.querySelector('.mw-category');
+      /* то есть мы определяем зону поиска, то есть конкретный элемент в DOM? Так как именно в нем содержаться все данные о бульварах и мы будем именно в нем искать?*/
+      const links = Array.from(category.querySelectorAll('a'));
+      /* в этом элементе мы ищем его потомков с тегом a - ссылка. так как название каждого бульвара содержит ссылку на другую страницу*/
+      const de = links
+                  .map(streets => streets.textContent)
+                  .filter(streets => streets.includes('de'));
+
+      // Хочу проговорить этот таск )
+      
   
       // 7. sort Exercise
       // Sort the people alphabetically by last name
