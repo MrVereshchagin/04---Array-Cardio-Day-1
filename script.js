@@ -101,8 +101,22 @@
       });
 
       console.log(sortPeople);
+
+      // этот таск тоже хочу проговрить
   
       // 8. Reduce Exercise
       // Sum up the instances of each of these
       const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck' ];
+
+      const transportation = data.reduce((obj, item) => {
+        if (!obj[item]) {
+          obj[item] = 0;
+        }
+        obj[item]++;
+        return obj;
+      },{}); // что значит последний аргумент?
+
+      console.log(transportation);
+
+      // нужно пояснение )
   
