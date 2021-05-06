@@ -40,6 +40,18 @@
   
       // Array.prototype.sort()
       // 3. Sort the inventors by birthdate, oldest to youngest
+      const fromOldestToYoungest = inventors.sort(function (a, b) {
+        return a.year-b.year;
+      });
+
+      console.table(fromOldestToYoungest);
+
+      /* У него решено иначе, код ниже:
+      const ordered = inventors.sort((a,b) => a.year - b.year ? 1 : -1);
+      console.log(ordered);
+      
+      не понимаю зачем нужен тернарный оператор, если в моем решении и так сортируется от меньшего к большему и все правильно? Может я что то не правильно понимаю. Или можно решить и  так и так?*/
+
   
       // Array.prototype.reduce()
       // 4. How many years did all the inventors live all together?
